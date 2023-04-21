@@ -26,7 +26,7 @@ driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get('https://steamdb.info/graph/')
 
 driver.find_element_by_xpath("//select[@name='table-apps_length']/option[text()='1K']").click()
-appids = [app.get_attribute('data-appid') for app in driver.find_elements_by_class_name('app')]
+appids = ['529340', '684450', '604540', '1158310', '718850', '637090', '464920', '572410', '616240', '362960', '384490', '281990', '233450', '238370', '255710', '205990', '226840', '236850', '227760']
 
 db = []
 
