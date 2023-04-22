@@ -1,3 +1,4 @@
+
 import os
 import json
 import requests
@@ -23,9 +24,6 @@ class Game:
     reviews: list[Review] = field(default_factory=list)
 
 driver = webdriver.Chrome(ChromeDriverManager().install())
-driver.get('https://steamdb.info/graph/')
-
-driver.find_element_by_xpath("//select[@name='table-apps_length']/option[text()='1K']").click()
 appids = ['529340', '684450', '604540', '1158310', '718850', '637090', '464920', '572410', '616240', '362960', '384490', '281990', '233450', '238370', '255710', '205990', '226840', '236850', '227760']
 
 db = []
@@ -93,7 +91,7 @@ for i, appid in enumerate(appids):
             funny_votes = elem.find_element_by_class_name('found_helpful').text
             review.funny_votes = int(funny_votes.split('\n')[1].split(' ')[0].replace(',', ''))
 
-            if review.funny_votes < 150:
+            if review.funny_votes < 50:
                 continue
         except Exception:
             continue
@@ -124,9 +122,9 @@ for i, appid in enumerate(appids):
             res = requests.get(f'https://cdn.akamai.steamstatic.com/steam/apps/{appid}/header.jpg')
             file.write(res.content)
 
-        print(f'✔️  [{i+1}/{len(appids)}] {game.name} ({game.appid})')
+        print(f'✔️  [{i+1}/{len(appids)}] {game.name} ({game.appid})'.encode('utf-8'))
     else:
-        print(f'❌ [{i+1}/{len(appids)}] {game.name} ({game.appid})')
+        print(f'❌ [{i+1}/{len(appids)}] {game.name} ({game.appid})'.encode('utf-8'))
 
 driver.close()
 
