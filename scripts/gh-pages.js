@@ -4,10 +4,10 @@ ghpages.publish(
     'public',
     {
         branch: 'gh-pages',
-        repo: 'https://github.com/aquelemiguel/its-ok-i-guess.git', 
+        repo: 'https://github.com/creativename64.git', 
         user: {
-            name: 'Miguel Mano',
-            email: 'aquelemiguel@gmail.com'
+            name: 'neop',
+            email: 'gaelanhortness@gmail.com'
         }
     },
     () => {
