@@ -79,8 +79,9 @@
 </script>
 
 <main>
-	<h1>it's ok, i guess</h1>
-	<h4>Guess the game from the Steam review!</h4>
+	<h1>it's paradox, i guess</h1>
+	<h4>Guess the strategy game from the Steam review!</h4>
+	<h5>Based on the work of aquelemiguel</h5>
 
 	<div class="score-container">
 		<div class="score-bubble">{ score }</div>
@@ -108,14 +109,8 @@
 
 
 	<div class="actions">
-		<a href="https://github.com/aquelemiguel/its-ok-i-guess" target="_blank">
+		<a href="https://github.com/creativename64/its-ok-i-guess-paradox" target="_blank">
 			<img src="icons/github.png" alt="GitHub logo" />
-		</a>
-		<a href="https://ko-fi.com/aquelemiguel" target="_blank">
-			<img src="icons/kofi.png" alt="Ko-Fi logo" />
-		</a>
-		<a href="https://paypal.com/paypalme/aquelemiguel/1" target="_blank">
-			<img src="icons/paypal.png" alt="PayPal logo" />
 		</a>
 	</div>
 </main>
